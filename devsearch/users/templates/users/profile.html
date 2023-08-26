@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>User Profiles</h1>
+<div>
+    <div><img height="50" src="{{ profile.profile_image.url }}" /></div>
+    <div>{{profile.name}}</div>
+    <div>{{profile.email}}</div>
+    <div>{{profile.bio}}</div>
+</div>
+{% endblock content %}

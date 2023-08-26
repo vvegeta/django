@@ -1,0 +1,14 @@
+{% load static %}
+<ul class="nav">
+    <img height="40" src="{% static 'images/transparent-logo.jpg' %}" />
+    <li><a href="{% url 'profiles' %}">Home</a></li>
+    <li><a href="{% url 'profiles' %}">Profiles</a></li>
+    <li><a href="{% url 'projects' %}">Projects</a></li>
+    <li>Project</li>
+    <li><a href="{% url 'create-project' %}">Add Project</a></li>
+    {% if request.user.is_authenticated %}
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+    {% else %}
+    <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+</ul>
